@@ -73,7 +73,7 @@ export default function Trees() {
       <Typography
         color="textSecondary"
         className={classes.depositContext}
-      >Updated:</Typography>
+      >Updated from Ecologi API on:</Typography>
       <Typography
         color="textSecondary"
         className={classes.depositContext}

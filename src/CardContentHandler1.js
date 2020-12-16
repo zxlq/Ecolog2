@@ -21,45 +21,40 @@ class CardContentHandler1 extends Component {
       <Grid container spacing={1}>
         {/* media card ecologi LOGO */}
 
-        <Grid item xs={12} md={12} lg={3}>
+        <Grid item xs={3} md={3} lg={3}>
           <Paper>
             <EcoCard />
 
           </Paper>
         </Grid>
 
-        <Grid item xs={12} md={12} lg={3}>
+        <Grid item xs={3} md={6} lg={3}>
           <Paper>
             <BicycleJourneys />
-
+            <hr></hr>
+            <Trees />
           </Paper>
         </Grid>
         
-
-        <Grid item xs={12} md={12} lg={3}>
+{/*Total Eco Credits Sold by Maynooth University*/}
+        <Grid item xs={3} md={6} lg={3}>
+          <Paper>
+          <TotalEcoCreditsLogged />
+          <hr></hr>
+            <TotalEcoCreditsSold />
+          </Paper>
+        </Grid>
+        <Grid item xs={3} md={6} lg={3}>
           <Paper>
             <SocialCardDemo />
           </Paper>
         </Grid>
         {/*Tress Purchased by Maynooth University from Ecologi*/}
-        <Grid item xs={12} md={12} lg={3}>
-          <Paper>
-            <Trees />
-          </Paper>
-        </Grid>
+       
         {/*Total Eco Credits Purchased//logged by Maynooth University*/}
-        <Grid item xs={12} md={12} lg={3}>
-          <Paper>
-            <TotalEcoCreditsLogged />
-          </Paper>
-        </Grid>
+        
 
-        {/*Total Eco Credits Sold by Maynooth University*/}
-        <Grid item xs={12} md={12} lg={3}>
-          <Paper>
-            <TotalEcoCreditsSold />
-          </Paper>
-        </Grid>
+        
       </Grid>
     );
   }
