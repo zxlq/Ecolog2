@@ -1,2 +1,2 @@
-# Ecolog2
+# ECOLOG
 Created with CodeSandbox
