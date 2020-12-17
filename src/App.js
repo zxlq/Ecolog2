@@ -29,7 +29,7 @@ import DashboardIcon from "@material-ui/icons/Dashboard";
 import CardContentHandler1 from "./CardContentHandler1";
 import CardContentHandler2 from "./CardContentHandler2";
 import CardContentHandler3 from "./CardContentHandler3";
-import EcoHomePage from "./DashboardCards/EcoCard";
+import EcoHomePage from "./DashboardCards/EcoHomePage";
 //Child
 //import CreditsEX from "./SpendCreditsCard"
 import {SpendC, CreditsEX} from "./SpendCreditsCard"
