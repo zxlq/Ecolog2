@@ -53,7 +53,7 @@ class TotalSold extends Component {
           height="100"
           align="center"
         ></img>
-        <Typography component="p" variant="h4">
+        <Typography component="p" variant="h5" align="center">
           {this.state.DataFromChild1_value_key} Credits
           <CreditsEX functionCallFromParent={this.parentFunction.bind(this)} />
         </Typography>

@@ -3,6 +3,7 @@ import React, { Component } from "react";
   import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Card from '@material-ui/core/Card';
+import CardMedia from '@material-ui/core/CardMedia';
 import Trees from "./DashboardCards/Trees";
 import TotalEcoCreditsSold from "./DashboardCards/TotalEcoCreditsSold";
 import SocialCardDemo from "./DashboardCards/SocialCardDemo";
@@ -11,7 +12,7 @@ import TotalEcoCreditsLogged from "./DashboardCards/TotalEcoCreditsLogged";
 
 import EcoCard from "./DashboardCards/EcoCard";
 import BicycleJourneys from "./DashboardCards/BicycleJourneys";
-
+import Chart from "./DashboardCards/Chart";
 //import SocialCardDemo from "./DashboardCards/SocialCardDemo";
 
 const styles = (theme) => ({
@@ -23,7 +24,8 @@ const styles = (theme) => ({
     height: 600
   },
   media: {
-    borderRadius: 6
+    borderRadius: 6,
+    height: 140
   },
   button: {
     margin: theme.spacing(1)
@@ -48,8 +50,9 @@ class CardContentHandler1 extends Component {
         </Grid>
 
         <Grid item xs={12} md={3} lg={3}>
-          <Paper variant="outlined" elevation={3}>
+          <Paper variant="outlined" elevation={3} align="center">
             <Card className={styles.root}>
+            
             <BicycleJourneys variant="outlined"/>
             <hr></hr>
             <Trees />
@@ -59,7 +62,7 @@ class CardContentHandler1 extends Component {
         
 {/*Total Eco Credits Sold by Maynooth University*/}
         <Grid item xs={12} md={3} lg={3}>
-          <Paper variant="outlined" elevation={3}>
+          <Paper variant="outlined" elevation={3} align="center">
           <Card className={styles.root}>
           <TotalEcoCreditsLogged  />
           <hr></hr>
@@ -68,8 +71,9 @@ class CardContentHandler1 extends Component {
           </Paper>
         </Grid>
         <Grid item xs={12} md={3} lg={3}>
-          <Paper variant="outlined" elevation={3}>
+          <Paper variant="outlined" elevation={3} align="center">
           <Card>
+            <Chart />
             <SocialCardDemo />
             </Card>
           </Paper>

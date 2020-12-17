@@ -4,6 +4,7 @@ import Title from "../Title";
 
 import React, { Component } from "react";
 import { SpendC, CreditsEX } from "../SpendCreditsCard";
+import CardMedia from "@material-ui/core/CardMedia";
 
 import { withStyles } from "@material-ui/core/styles";
 const styles = (theme) => ({
@@ -28,14 +29,11 @@ const styles = (theme) => ({
 class BicycleJourneys extends Component {
   constructor(props) {
     super(props);
-    
   }
-
-  
 
   render() {
     return (
-      <React.Fragment>
+      <div>
         <img
           src="bicycle-svgrepo-com.svg"
           alt="Logo"
@@ -44,17 +42,12 @@ class BicycleJourneys extends Component {
           align="center"
         ></img>
         <Typography component="p" variant="h3">
-         2,342 
+          2,342
         </Typography>
-        <Typography
-              component="h3"
-              color="inherit"
-              
-              className={styles.title}
-            >
-        <Title>Bike Journeys by Maynooth University in 2020</Title>
+        <Typography component="h3" color="inherit" className={styles.title}>
+          <Title>Bike Journeys by Maynooth University in 2020</Title>
         </Typography>
-      </React.Fragment>
+      </div>
     );
   }
 }

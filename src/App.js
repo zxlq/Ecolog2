@@ -2,7 +2,7 @@ import * as React from "react";
 import { Component } from "react";
 import clsx from "clsx";
 import { withStyles } from "@material-ui/core/styles";
-import Drawer from "@material-ui/core/Drawer";
+ import Drawer from "@material-ui/core/Drawer";
 import NoteAddIcon from "@material-ui/icons/NoteAdd";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";

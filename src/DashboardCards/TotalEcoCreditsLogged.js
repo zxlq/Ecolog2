@@ -57,14 +57,14 @@ class TotalEcoCreditsLogged extends Component {
           alt="Logo"
           width="100"
           height="100"
-          align="justify"
+          align="center"
         ></img>
         
-        <Typography component="p" variant="h4" align="justify">
+        <Typography component="p" variant="h5" align="center">
           {this.state.DataFromChild1_value_key} Credits
           <CreditsExLog functionCallFromParent={this.parentFunction.bind(this)} />
         </Typography >
-        <Title>Eco Credits Logged by Maynooth University</Title>
+        <Title align="center">Eco Credits Logged by Maynooth University</Title>
       </React.Fragment>
     );
   }
