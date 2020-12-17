@@ -28,9 +28,9 @@ const styles = (theme) => ({
 class TotalSold extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       //state variable to await new data
-      DataFromChild1_value_key: "Waiting for Data" 
+      DataFromChild1_value_key: "Waiting for Data"
     };
     this.parentFunction = this.parentFunction.bind(this);
   }
@@ -44,8 +44,6 @@ class TotalSold extends Component {
     this.setState({ DataFromChild1_value_key: data_from_child });
   };
 
-  
-
   render() {
     return (
       <React.Fragment>
@@ -53,7 +51,7 @@ class TotalSold extends Component {
           src="EcoToken.svg"
           alt="Logo"
           width="100"
-          height="160"
+          height="170"
           align="center"
         ></img>
         <Typography component="p" variant="h5" align="center">
