@@ -38,7 +38,7 @@ class BicycleJourneys extends Component {
           src="bicycle-svgrepo-com.svg"
           alt="Logo"
           width="250"
-          height="160"
+          height="170"
           align="center"
         ></img>
         <Typography component="p" variant="h3">
