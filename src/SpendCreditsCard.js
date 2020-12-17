@@ -33,6 +33,9 @@ class SpendCreditsCard extends Component {
     this.home = this.home.bind(this);
     this.Badbalance = this.BadBalance.bind(this);
     //this.childFunction = this.childFunction.bind(this);
+    // Here we have created four states, firstly eco credits to keep track
+    // of your balance, secondly a boolean fuction called render and two cart
+    // states that keep track of total price and the names of the items in basket
   }
 
   spending() {
@@ -44,6 +47,9 @@ class SpendCreditsCard extends Component {
     this.setState({ cart: 0 });
     this.setState({ kart: [""] });
     Balance = num3;
+    // this function called spending, subtracts the total amount in the cart from
+    // from the users balance. It then sets the carts back to zero and changes to render 
+   
   }
   Contribute() {
     let x = this.state.cart;
@@ -307,8 +313,8 @@ class SpendCreditsCard extends Component {
 
 //create mini database
 export let Balance = 2415;
-  //// this 2412 is sent to the TotalEcoCreditSold.js file and dashboard
-  
+//// this 2412 is sent to the TotalEcoCreditSold.js file and dashboard
+
 class CreditsEX extends Component {
   childFunction = (e) => {
     e.preventDefault();

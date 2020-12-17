@@ -28,11 +28,14 @@ const styles = (theme) => ({
 class TotalSold extends Component {
   constructor(props) {
     super(props);
-    this.state = { DataFromChild1_value_key: "Waiting for Data" };
+    this.state = { 
+      //state variable to await new data
+      DataFromChild1_value_key: "Waiting for Data" 
+    };
     this.parentFunction = this.parentFunction.bind(this);
   }
 
-  ////test
+  ////get the spending data from the SpendCreditsTotal
 
   parentFunction = (data_from_child) => {
     console.log(data_from_child);
@@ -41,7 +44,7 @@ class TotalSold extends Component {
     this.setState({ DataFromChild1_value_key: data_from_child });
   };
 
-  //test
+  
 
   render() {
     return (

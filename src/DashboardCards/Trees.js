@@ -32,8 +32,7 @@ export default function Trees() {
           console.log("Home Data: ", res.data);
           let companyData = res.data;
           setData({ total: companyData.total });
-          //console.log("Colors Data: ", res.data.data);
-          // setColorsData(res.data.data)
+          
         })
         .catch((err) => {
           console.log(err);

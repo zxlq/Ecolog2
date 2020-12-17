@@ -3,7 +3,6 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import SaveIcon from "@material-ui/icons/Save";
 
-
 import { withStyles } from "@material-ui/core/styles";
 const styles = (theme) => ({
   root: {
@@ -31,7 +30,10 @@ class LogCreditsCard extends Component {
     this.logging = this.logging.bind(this);
     this.log = this.log.bind(this);
     this.home = this.home.bind(this);
-    
+    //this.childFunction = this.childFunction.bind(this);
+    // Here we have created four states, firstly eco credits to keep track
+    // of your balance, secondly a boolean fuction called render and two cart
+    // states that keep track of total price and the names of the items in basket
   }
   logging() {
     let num1 = this.state.ecocredits;
@@ -42,6 +44,9 @@ class LogCreditsCard extends Component {
     this.setState({ cart: 0 });
     this.setState({ kart: [""] });
     Balance = num3;
+    // this function called spending, subtracts the total amount in the cart from
+    // from the users balance. It then sets the carts back to zero
+    // and changes to render state to false
   }
   log() {
     let x = this.state.cart;
@@ -51,6 +56,9 @@ class LogCreditsCard extends Component {
     this.setState({ cart: z });
     this.setState({ kart: this.state.kart.concat(["Walked to work "]) });
   }
+  // This function adds the price and the name of the item to the carts.
+  // It also sets the render function to true which allows the spend fucntion to render
+  // Using 3 variables it keeps track if clicked more than once.
   log2() {
     let x = this.state.cart;
     let y = 5;
@@ -60,6 +68,9 @@ class LogCreditsCard extends Component {
     this.setState({
       kart: this.state.kart.concat(["Used re-usable coffee cup "])
     });
+    // This function adds the price and the name of the item to the carts.
+    // It also sets the render function to true which allows the spend fucntion to render
+    // Using 3 variables it keeps track if clicked more than once.
   }
   log3() {
     let x = this.state.cart;
@@ -70,6 +81,9 @@ class LogCreditsCard extends Component {
     this.setState({
       kart: this.state.kart.concat(["Office lights switched off "])
     });
+    // This function adds the price and the name of the item to the carts.
+    // It also sets the render function to true which allows the spend fucntion to render
+    // Using 3 variables it keeps track if clicked more than once.
   }
   log4() {
     let x = this.state.cart;
@@ -80,6 +94,9 @@ class LogCreditsCard extends Component {
     this.setState({
       kart: this.state.kart.concat(["No paper printed today "])
     });
+    // This function adds the price and the name of the item to the carts.
+    // It also sets the render function to true which allows the spend fucntion to render
+    // Using 3 variables it keeps track if clicked more than once.
   }
   log5() {
     let x = this.state.cart;
@@ -89,6 +106,9 @@ class LogCreditsCard extends Component {
     this.setState({ cart: z });
     this.setState({ kart: this.state.kart.concat(["Recycled all waste "]) });
   }
+  // This function adds the price and the name of the item to the carts.
+  // It also sets the render function to true which allows the spend fucntion to render
+  // Using 3 variables it keeps track if clicked more than once.
   home() {
     let curCart = this.state.cart;
     let newCart = curCart - 5;
@@ -98,10 +118,9 @@ class LogCreditsCard extends Component {
   render() {
     const { classes } = this.props;
     const ss = this.state.render;
-  
 
-    
-      if (ss === true) {
+    if (ss === true) {
+      // this will only render if the user has clicked one of the five log buttons
       return (
         <div className="App">
           <Typography
@@ -126,7 +145,7 @@ class LogCreditsCard extends Component {
                 size="small"
                 className={classes.button}
                 startIcon={<SaveIcon />}
-                onClick={() => this.log()}
+                onClick={() => this.log()} // button to log credits
               >
                 Log
               </Button>
@@ -138,7 +157,7 @@ class LogCreditsCard extends Component {
                 size="small"
                 className={classes.button}
                 startIcon={<SaveIcon />}
-                onClick={() => this.log2()}
+                onClick={() => this.log2()} // button to log credits
               >
                 Log
               </Button>
@@ -150,7 +169,7 @@ class LogCreditsCard extends Component {
                 size="small"
                 className={classes.button}
                 startIcon={<SaveIcon />}
-                onClick={() => this.log3()}
+                onClick={() => this.log3()} // button to log credits
               >
                 Log
               </Button>
@@ -162,7 +181,7 @@ class LogCreditsCard extends Component {
                 size="small"
                 className={classes.button}
                 startIcon={<SaveIcon />}
-                onClick={() => this.log4()}
+                onClick={() => this.log4()} // button to log credits
               >
                 Log
               </Button>
@@ -174,7 +193,7 @@ class LogCreditsCard extends Component {
                 size="small"
                 className={classes.button}
                 startIcon={<SaveIcon />}
-                onClick={() => this.log5()}
+                onClick={() => this.log5()} // button to log credits
               >
                 Log
               </Button>
@@ -290,14 +309,12 @@ class LogCreditsCard extends Component {
 
 //create mini database
 export let Balance = 8232;
-  //// this 2412 is sent to the TotalEcoCreditSold.js file and dashboard
-  
+//// this 2412 is sent to the TotalEcoCreditSold.js file and dashboard
+
 class CreditsExLog extends Component {
   childFunction = (e) => {
     e.preventDefault();
     this.props.functionCallFromParent(Balance);
-
-   
   };
 
   render() {
