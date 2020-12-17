@@ -12,7 +12,7 @@ const styles = (theme) => ({
     margin: "auto",
     borderRadius: 12,
     padding: 12,
-    height: 600
+    height: 700
   },
   media: {
     borderRadius: 6
@@ -50,7 +50,7 @@ class TotalSold extends Component {
           src="EcoToken.svg"
           alt="Logo"
           width="100"
-          height="100"
+          height="160"
           align="center"
         ></img>
         <Typography component="p" variant="h5" align="center">

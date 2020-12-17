@@ -16,7 +16,7 @@ const styles = (theme) => ({
     margin: "auto",
     borderRadius: 12,
     padding: 12,
-    height: 600
+    height: 700
   },
   media: {
     height: 0,
@@ -56,7 +56,7 @@ class TotalEcoCreditsLogged extends Component {
           src="Log.svg"
           alt="Logo"
           width="100"
-          height="100"
+          height="170"
           align="center"
         ></img>
         

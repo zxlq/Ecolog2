@@ -21,7 +21,7 @@ const styles = (theme) => ({
     margin: "auto",
     borderRadius: 12,
     padding: 12,
-    height: 600
+    height: 700
   },
   media: {
     borderRadius: 6,
@@ -51,7 +51,7 @@ class CardContentHandler1 extends Component {
 
         <Grid item xs={12} md={3} lg={3}>
           <Paper variant="outlined" elevation={3} align="center">
-            <Card className={styles.root}>
+            <Card className={styles.root} height="600">
             
             <BicycleJourneys variant="outlined"/>
             <hr></hr>
@@ -63,9 +63,10 @@ class CardContentHandler1 extends Component {
 {/*Total Eco Credits Sold by Maynooth University*/}
         <Grid item xs={12} md={3} lg={3}>
           <Paper variant="outlined" elevation={3} align="center">
-          <Card className={styles.root}>
+          <Card className={styles.root} height="900">
           <TotalEcoCreditsLogged  />
           <hr></hr>
+          
             <TotalEcoCreditsSold />
             </Card>
           </Paper>
