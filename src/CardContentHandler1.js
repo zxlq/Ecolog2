@@ -74,8 +74,13 @@ class CardContentHandler1 extends Component {
         <Grid item xs={12} md={3} lg={3}>
           <Paper variant="outlined" elevation={3} align="center">
           <Card>
-            <Chart />
+            
             <SocialCardDemo />
+            </Card>
+            <Card>
+            
+            <Chart />
+            
             </Card>
           </Paper>
         </Grid>
