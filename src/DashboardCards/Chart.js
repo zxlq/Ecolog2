@@ -18,7 +18,7 @@ export default function Charts() {
       <div className="section col-md-6">
         <h3 className="section-title">Our Stats</h3>
         <div className="section-content">
-          <ResponsiveContainer width="100%" height={200}>
+          <ResponsiveContainer width="100%" height={180}>
             <LineChart data={data} margin={{ top: 15, right: 30, bottom: 15, left: 0 }}>
               <Tooltip />
               <XAxis dataKey="label" />
