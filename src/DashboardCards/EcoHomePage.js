@@ -38,10 +38,7 @@ export const EcoHomePage = React.memo(function MusicCard() {
         <TextInfoContent
           classes={textCardContentStyles}
           overline={"EcoLog"}
-          heading={"Your Eco Friendly App "}
-          body={
-            "Our Clients have partnered with EcoLog to take action on the climate crisis by planting trees, taking bicycle journeys and lowering their carbon footprint to offset our carbon footprint"
-          }
+          
         />
       </CardContent>
     </Card>
