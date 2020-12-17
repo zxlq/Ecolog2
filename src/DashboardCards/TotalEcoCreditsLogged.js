@@ -1,6 +1,8 @@
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Title from "../Title";
+import CardMedia from '@material-ui/core/CardMedia';
+
 
 import React, { Component } from "react";
 
@@ -17,7 +19,8 @@ const styles = (theme) => ({
     height: 600
   },
   media: {
-    borderRadius: 6
+    height: 0,
+    paddingTop: '56.25%', // 16:9
   },
   button: {
     margin: theme.spacing(1)
@@ -48,17 +51,19 @@ class TotalEcoCreditsLogged extends Component {
   render() {
     return (
       <React.Fragment>
-        <img
+       
+      <img
           src="Log.svg"
           alt="Logo"
           width="100"
           height="100"
-          align="center"
+          align="justify"
         ></img>
-        <Typography component="p" variant="h4">
+        
+        <Typography component="p" variant="h4" align="justify">
           {this.state.DataFromChild1_value_key} Credits
           <CreditsExLog functionCallFromParent={this.parentFunction.bind(this)} />
-        </Typography>
+        </Typography >
         <Title>Eco Credits Logged by Maynooth University</Title>
       </React.Fragment>
     );

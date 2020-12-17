@@ -7,7 +7,7 @@ import NoteAddIcon from "@material-ui/icons/NoteAdd";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
- import Typography from "@material-ui/core/Typography";
+import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import Badge from "@material-ui/core/Badge";
@@ -37,7 +37,7 @@ import {SpendC, CreditsEX} from "./SpendCreditsCard"
 function Copyright() {
   return (
     
-    <Typography variant="body2" color="textSecondary" align="center">
+    <Typography variant="body2" color="textPrimary" align="center">
       <EcoHomePage/>
       {"Copyright © "}
       <Link color="inherit" href="https://www.EcoLog.ie/">
@@ -193,7 +193,7 @@ class App extends Component {
 
     return (
       <div className={classes.root}>
-        <AppBar
+        <AppBar 
           position="absolute"
           className={clsx(
             classes.appBar,
@@ -216,8 +216,7 @@ class App extends Component {
             </IconButton>
 
             <Typography
-              component="h9"
-              variant="h9"
+              component="h3"
               color="inherit"
               noWrap
               className={classes.title}

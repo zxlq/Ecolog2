@@ -46,7 +46,14 @@ class BicycleJourneys extends Component {
         <Typography component="p" variant="h3">
          2,342 
         </Typography>
+        <Typography
+              component="h3"
+              color="inherit"
+              
+              className={styles.title}
+            >
         <Title>Bike Journeys by Maynooth University in 2020</Title>
+        </Typography>
       </React.Fragment>
     );
   }

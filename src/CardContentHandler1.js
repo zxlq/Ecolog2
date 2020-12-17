@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
   import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
-
+import Card from '@material-ui/core/Card';
 import Trees from "./DashboardCards/Trees";
 import TotalEcoCreditsSold from "./DashboardCards/TotalEcoCreditsSold";
 import SocialCardDemo from "./DashboardCards/SocialCardDemo";
@@ -14,6 +14,25 @@ import BicycleJourneys from "./DashboardCards/BicycleJourneys";
 
 //import SocialCardDemo from "./DashboardCards/SocialCardDemo";
 
+const styles = (theme) => ({
+  root: {
+    maxWidth: 643,
+    margin: "auto",
+    borderRadius: 12,
+    padding: 12,
+    height: 600
+  },
+  media: {
+    borderRadius: 6
+  },
+  button: {
+    margin: theme.spacing(1)
+  },
+  title: {
+    flexGrow: 1
+  }
+});
+
 //This displays the DASHBOARD CARDS and is called from app.js in the main div around line 234
 class CardContentHandler1 extends Component {
   render() {
@@ -22,31 +41,37 @@ class CardContentHandler1 extends Component {
         {/* media card ecologi LOGO */}
 
         <Grid item xs={12} md={3} lg={3}>
-          <Paper>
+          <Paper elevation={3}>
             <EcoCard />
 
           </Paper>
         </Grid>
 
         <Grid item xs={12} md={3} lg={3}>
-          <Paper>
-            <BicycleJourneys />
+          <Paper variant="outlined" elevation={3}>
+            <Card className={styles.root}>
+            <BicycleJourneys variant="outlined"/>
             <hr></hr>
             <Trees />
+            </Card>
           </Paper>
         </Grid>
         
 {/*Total Eco Credits Sold by Maynooth University*/}
         <Grid item xs={12} md={3} lg={3}>
-          <Paper>
-          <TotalEcoCreditsLogged />
+          <Paper variant="outlined" elevation={3}>
+          <Card className={styles.root}>
+          <TotalEcoCreditsLogged  />
           <hr></hr>
             <TotalEcoCreditsSold />
+            </Card>
           </Paper>
         </Grid>
         <Grid item xs={12} md={3} lg={3}>
-          <Paper>
+          <Paper variant="outlined" elevation={3}>
+          <Card>
             <SocialCardDemo />
+            </Card>
           </Paper>
         </Grid>
         {/*Tress Purchased by Maynooth University from Ecologi*/}
