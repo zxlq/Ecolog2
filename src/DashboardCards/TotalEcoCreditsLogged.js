@@ -31,13 +31,18 @@ const styles = (theme) => ({
 });
 
 class TotalEcoCreditsLogged extends Component {
+  
+  
   constructor(props) {
     super(props);
-    this.state = { DataFromChild1_value_key: "Waiting for Data" };
+
+    // created state variable to recieve data from LogEcoCredits
+    this.state = { DataFromChild1_value_key: "Waiting for Logs Data" };
     this.parentFunction = this.parentFunction.bind(this);
   }
 
-  ////test
+  
+  ////get the spending data from the LogCreditsTotal
 
   parentFunction = (data_from_child) => {
     console.log(data_from_child);
@@ -46,9 +51,10 @@ class TotalEcoCreditsLogged extends Component {
     this.setState({ DataFromChild1_value_key: data_from_child });
   };
 
-  //test
+  
 
   render() {
+//Show the transaction total on screen 
     return (
       <React.Fragment>
        

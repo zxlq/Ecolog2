@@ -30,7 +30,7 @@ class BicycleJourneys extends Component {
   constructor(props) {
     super(props);
   }
-
+// we load a card to show the data with logos and data point
   render() {
     return (
       <div>

@@ -30,7 +30,8 @@ class TotalSold extends Component {
     super(props);
     this.state = {
       //state variable to await new data
-      DataFromChild1_value_key: "Waiting for Data"
+      //data received from child and stored in state
+      DataFromChild1_value_key: "Waiting for Sales Data"
     };
     this.parentFunction = this.parentFunction.bind(this);
   }
@@ -45,6 +46,7 @@ class TotalSold extends Component {
   };
 
   render() {
+    //Show the transaction total on screen 
     return (
       <React.Fragment>
         <img

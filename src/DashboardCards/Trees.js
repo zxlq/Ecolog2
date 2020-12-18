@@ -1,10 +1,11 @@
-//import * as React from 'react';
+//This Class calls a live ECOLOGI.com api and displays theresult.
 
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Title from "../Title";
 import React, { useEffect, useState } from "react";
-//import Home from './Dashboard';
+
+//we import AXIOS to get our API data
 import axios from "axios";
 
 
@@ -54,7 +55,7 @@ export default function Trees() {
     var sec = new Date().getSeconds(); //Current Seconds
     setCurrentDate(date + "/" + month + "/" + year);
   }, []);
-
+// we load a card to show the data with logos and data point
   return (
     <React.Fragment>
       <img

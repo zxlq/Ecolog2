@@ -1,3 +1,8 @@
+
+//Imported chart example from recharts
+
+//https://recharts.org/en-US/examples/SimpleLineChart
+
 import React from 'react'
 import { ResponsiveContainer, LineChart, Line, BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 
@@ -11,6 +16,7 @@ const data = [
 ];
 
 export default function Charts() {
+  // we load a card to show the data with logos and data point
   return (
     <div className="row">
       
