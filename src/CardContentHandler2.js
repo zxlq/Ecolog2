@@ -13,12 +13,13 @@ class CardContentHandler2 extends Component {
     return (
 
   <Grid container spacing={1}>
-            {/* media card ecologi LOGO */}
+            
 
           
 
             <Grid item xs={12} md={12} lg={12}>
               <Paper>
+                {/* Import mini card to show the LOGGED CREDITS */}
               <LogCd />
               </Paper>
             </Grid>

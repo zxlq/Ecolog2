@@ -52,9 +52,10 @@ class CardContentHandler1 extends Component {
         <Grid item xs={12} md={3} lg={3}>
           <Paper variant="outlined" elevation={3} align="center">
             <Card className={styles.root} height="600">
-            
+             {/* import bicyclesJourneys.js file */}
             <BicycleJourneys variant="outlined"/>
             <hr></hr>
+            {/*Tress Purchased by Maynooth University from Ecologi API*/}
             <Trees />
             </Card>
           </Paper>
@@ -66,7 +67,7 @@ class CardContentHandler1 extends Component {
           <Card className={styles.root} height="900">
           <TotalEcoCreditsLogged  />
           <hr></hr>
-          
+          {/*Total Eco Credits Purchased//logged by Maynooth University*/}
             <TotalEcoCreditsSold />
             </Card>
           </Paper>
@@ -74,7 +75,7 @@ class CardContentHandler1 extends Component {
         <Grid item xs={12} md={3} lg={3}>
           <Paper variant="outlined" elevation={3} align="center">
           <Card>
-            
+            {/* import social card demo file */}
             <SocialCardDemo />
             <hr></hr>
             </Card>
@@ -87,7 +88,7 @@ class CardContentHandler1 extends Component {
         </Grid>
         {/*Tress Purchased by Maynooth University from Ecologi*/}
        
-        {/*Total Eco Credits Purchased//logged by Maynooth University*/}
+        
         
 
         

@@ -17,7 +17,7 @@ class CardContentHandler3 extends Component {
         <Grid item xs={12} md={12} lg={12}>
           <Paper>
             <Card>
-            
+             {/* Import mini card to show the SOLD CREDITS */}
             <SpendCd />
          
             </Card>

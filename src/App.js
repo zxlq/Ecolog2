@@ -1,3 +1,9 @@
+//This is the main screen which loads the app.
+
+
+
+
+
 import * as React from "react";
 import { Component } from "react";
 import clsx from "clsx";
@@ -18,7 +24,8 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import Container from "@material-ui/core/Container";
 import CreditCardIcon from "@material-ui/icons/CreditCard";
-//side buttons
+
+// We import the side buttons as list items which we can select different page renders
 
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
@@ -36,7 +43,7 @@ import {SpendC, CreditsEX} from "./SpendCreditsCard"
 
 function Copyright() {
   return (
-    
+    // we load a home page icon card
     <Typography variant="body2" color="textPrimary" align="center">
       <EcoHomePage/>
       {"Copyright © "}
@@ -52,6 +59,7 @@ function Copyright() {
 
 const drawerWidth = 240;
 
+// this is our styling theme
 const styles = (theme) => ({
   root: {
     display: "flex"
@@ -143,11 +151,13 @@ class App extends Component {
     super(props);
     this.state = {
       open: false,
-      choice: "None",
+      
       
     };
 
     this.handleToggle = this.handleToggle.bind(this);
+    
+    //thes buttons are boind to our side bar buttons
     this.ButtonCardContentHandler1Action = this.ButtonCardContentHandler1Action.bind(
       this
     );
@@ -160,28 +170,22 @@ class App extends Component {
     }
 
   ButtonCardContentHandler1Action() {
-    let creditsA = this.state.UserCredits;
-
-    creditsA = creditsA + 20;
-    this.setState({ UserCredits: creditsA });
+    //selects A for Dashbaord
     this.setState({ choice: "A" });
-    console.log(creditsA + " topped up by x20 test");
+    
   }
 
   ButtonCardContentHandler2Action() {
-    //let curB = this.state.variableForLog;
-
-    //this.setState({ UserCredits: curB });
+    //selects B for log eco credis
     this.setState({ choice: "B" });
   }
 
   ButtonCardContentHandler3Action() {
-    //let curC = this.state.variableForSpend;
-
-    //this.setState({ UserCredits: curC });
+    //Selects C for spend eco credits page
     this.setState({ choice: "C" });
   }
 
+  //handle the toggle side bar drawer
   handleToggle = () => {
     this.setState({ open: !this.state.open });
   };
@@ -189,9 +193,10 @@ class App extends Component {
   render() {
     const { classes } = this.props;
 
-    //const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
     return (
+
+      //we make an appbar
       <div className={classes.root}>
         <AppBar 
           position="absolute"
@@ -201,6 +206,7 @@ class App extends Component {
           )}
           style={{ background: "#28c180" }}
         >
+         
           <Toolbar className={classes.toolbar}>
             <IconButton
               edge="start"
@@ -232,7 +238,7 @@ class App extends Component {
             </IconButton>
           </Toolbar>
         </AppBar>
-
+              
         <Drawer
           variant="permanent"
           classes={{
@@ -277,16 +283,24 @@ class App extends Component {
           <div className={classes.appBarSpacer} />
 
           <Container maxWidth="lg" className={classes.container}>
+            
             {this.state.choice === "A" && (
               <CardContentHandler1 varA={this.state.UserCredits} />
-            )}
-
+            )
+            /* select choice A for dashbaord and call first card handler */
+            }
+            
             {this.state.choice === "B" && (
               <CardContentHandler2 varB={this.state.variableForLog} />
-            )}
+            )
+            /* select choice B for dashbaord and call second card handler */
+            }
+          
             {this.state.choice === "C" && (
               <CardContentHandler3 varB={this.state.variableForSpend} />
-            )}
+            )
+            /* select choice C for dashbaord and call 3rd card handler */
+            }
 
           </Container>
           <Box pt={4}>
