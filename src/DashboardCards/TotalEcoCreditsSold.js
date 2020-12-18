@@ -1,9 +1,9 @@
-import { makeStyles } from "@material-ui/core/styles";
+
 import Typography from "@material-ui/core/Typography";
 import Title from "../Title";
 
 import React, { Component } from "react";
-import { SpendC, CreditsEX } from "../SpendCreditsCard";
+import { CreditsEX } from "../SpendCreditsCard";
 
 import { withStyles } from "@material-ui/core/styles";
 const styles = (theme) => ({

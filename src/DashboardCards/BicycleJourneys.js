@@ -1,10 +1,9 @@
-import { makeStyles } from "@material-ui/core/styles";
+
 import Typography from "@material-ui/core/Typography";
 import Title from "../Title";
 
 import React, { Component } from "react";
-import { SpendC, CreditsEX } from "../SpendCreditsCard";
-import CardMedia from "@material-ui/core/CardMedia";
+
 
 import { withStyles } from "@material-ui/core/styles";
 const styles = (theme) => ({
@@ -27,9 +26,7 @@ const styles = (theme) => ({
 });
 
 class BicycleJourneys extends Component {
-  constructor(props) {
-    super(props);
-  }
+ 
 // we load a card to show the data with logos and data point
   render() {
     return (

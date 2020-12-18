@@ -1,13 +1,13 @@
-import { makeStyles } from "@material-ui/core/styles";
+
 import Typography from "@material-ui/core/Typography";
 import Title from "../Title";
-import CardMedia from '@material-ui/core/CardMedia';
+
 
 
 import React, { Component } from "react";
 
 //changed
-import { LogCd, CreditsExLog } from "../LogCreditsCard";
+import { CreditsExLog } from "../LogCreditsCard";
 
 import { withStyles } from "@material-ui/core/styles";
 const styles = (theme) => ({

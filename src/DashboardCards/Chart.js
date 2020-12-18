@@ -4,7 +4,7 @@
 //https://recharts.org/en-US/examples/SimpleLineChart
 
 import React from 'react'
-import { ResponsiveContainer, LineChart, Line, BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 
 const data = [
   { label: 'January', CreditsSold: 21, CreditsLogged: 41 },
